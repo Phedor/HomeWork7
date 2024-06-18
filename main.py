@@ -1,6 +1,5 @@
-from src.widget import mask_account_card
-from src.widget import format_date
 from src.processing import filter_by_state, sort_by_date
+
 
 def main() -> None:
     test = [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
@@ -10,6 +9,7 @@ def main() -> None:
     print(f'Сортировка по убыванию: {sort_by_date(test, asc=False)}')
     print(f'Сортировка по возрастанию: {sort_by_date(test, asc=True)}')
     print(f'Фильрация по статусу: {filter_by_state(test)}')
+
 
 if __name__ == "__main__":
     main()

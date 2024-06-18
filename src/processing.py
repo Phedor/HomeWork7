@@ -6,6 +6,6 @@ def filter_by_state(processing_list: list):
     return result
 
 
-def sort_by_date(info: list, asc=True)->list [str]:
+def sort_by_date(info: list, asc=True) -> list[str]:
     result = sorted(info, key=lambda x: x['date'], reverse=not asc)
     return result
