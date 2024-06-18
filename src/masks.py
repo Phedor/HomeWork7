@@ -1,4 +1,4 @@
-def get_mask_card_number(card_number: str) -> str:
+def get_mask_card_number(card_number: str) -> str | None:
     """ Возвращает маску номера карты """
     while " " in card_number:
         card_number = card_number.replace(" ", "")
@@ -6,7 +6,9 @@ def get_mask_card_number(card_number: str) -> str:
     return mask
 
 
-def get_mask_account(account_number: str) -> str:
-    """ Возвращает маску номера счета """
+def get_mask_account(account_number: str) -> str | None:
+    """ Возвращает маску номера счета
+    :type account_number: Номер счета
+    """
     mask = "**" + account_number[-4:]
     return mask

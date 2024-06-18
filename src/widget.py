@@ -13,7 +13,7 @@ def mask_account_card(payment: str) -> str | None:
         account_number = ''.join(number)
         if account_number.isnumeric() and len(account_number) == 16:
             return f'{name} {get_mask_card_number(account_number)}'
-    print('Не удалось определить тип платежа')
+    return None
 
 
 def format_date(abs_date: str) -> str | None:
@@ -34,4 +34,4 @@ def format_date(abs_date: str) -> str | None:
     if day.isnumeric() and month.isnumeric() and year.isnumeric():
         return f'{day}.{month}.{year}'
     else:
-        print('Не удалость преобразовать дату')
+        return None
